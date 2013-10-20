@@ -1,0 +1,1 @@
+--debug -O=gsharedvt  --aot=mtriple=armv7-ios,full,static,asmonly,direct-icalls,soft-debug,dwarfdebug,no-direct-calls,iphone-abi,outfile=/FluentValidation.dll.armv7.s "/Users/oliver/Projects/FluentValidation.iOS/FluentValidation.iOS/bin/Debug/FluentValidation.dll"

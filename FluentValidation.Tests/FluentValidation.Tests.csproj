@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0543D7A7-2AA2-4DE6-8282-5C1DCF24F09F}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FluentValidationTests</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>FluentValidationTests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <IpaPackageName />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.NUnitLite" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="FluentValidation.Tests.csproj" />
+    <None Include="TestMessages.fr.resources" />
+    <None Include="TestMessages.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="UnitTestAppDelegate.cs" />
+    <Compile Include="AbstractValidatorTester.cs" />
+    <Compile Include="AttributedValidatorFactoryTester.cs" />
+    <Compile Include="CascadingFailuresTester.cs" />
+    <Compile Include="ChainedValidationTester.cs" />
+    <Compile Include="ChainingValidatorsTester.cs" />
+    <Compile Include="ChildValidatorInferenceTests.cs" />
+    <Compile Include="CollectionValidatorTests.cs" />
+    <Compile Include="ComparerTester.cs" />
+    <Compile Include="ComplexValidationTester.cs" />
+    <Compile Include="ConditionTests.cs" />
+    <Compile Include="CreditCardValidatorTests.cs" />
+    <Compile Include="CultureScope.cs" />
+    <Compile Include="CustomFailureActionTester.cs" />
+    <Compile Include="CustomMessageFormatTester.cs" />
+    <Compile Include="CustomValidatorTester.cs" />
+    <Compile Include="DefaultValidatorExtensionTester.cs" />
+    <Compile Include="EmailValidatorTests.cs" />
+    <Compile Include="EqualValidatorTests.cs" />
+    <Compile Include="ExactLengthValidatorTester.cs" />
+    <Compile Include="ExclusiveBetweenValidatorTests.cs" />
+    <Compile Include="ExtensionTester.cs" />
+    <Compile Include="ForEachRuleTests.cs" />
+    <Compile Include="GreaterThanOrEqualToValidatorTester.cs" />
+    <Compile Include="GreaterThanValidatorTester.cs" />
+    <Compile Include="InclusiveBetweenValidatorTests.cs" />
+    <Compile Include="InlineValidatorTester.cs" />
+    <Compile Include="InstanceCacheTester.cs" />
+    <Compile Include="LengthValidatorTests.cs" />
+    <Compile Include="LessThanOrEqualToValidatorTester.cs" />
+    <Compile Include="LessThanValidatorTester.cs" />
+    <Compile Include="LocalisedMessagesTester.cs" />
+    <Compile Include="MemberAccessorTests.cs" />
+    <Compile Include="MessageFormatterTests.cs" />
+    <Compile Include="NameResolutionPluggabilityTester.cs" />
+    <Compile Include="NotEqualValidatorTests.cs" />
+    <Compile Include="NotNullTester.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="PredicateValidatorTester.cs" />
+    <Compile Include="PropertyChainTests.cs" />
+    <Compile Include="PropertyRuleValidatorExtensionsTester.cs" />
+    <Compile Include="PropertyValidatorTester.cs" />
+    <Compile Include="RegularExpressionValidatorTests.cs" />
+    <Compile Include="RulesetTests.cs" />
+    <Compile Include="ScalePrecisionValidatorTests.cs" />
+    <Compile Include="SharedConditionTests.cs" />
+    <Compile Include="StandalonePropertyValidationTester.cs" />
+    <Compile Include="TestMessages.Designer.cs" />
+    <Compile Include="TestValidator.cs" />
+    <Compile Include="TrackingCollectionTests.cs" />
+    <Compile Include="UserStateTester.cs" />
+    <Compile Include="ValidateAndThrowTester.cs" />
+    <Compile Include="ValidationResultTests.cs" />
+    <Compile Include="ValidatorDescriptorTester.cs" />
+    <Compile Include="ValidatorSelectorTests.cs" />
+    <Compile Include="ValidatorTesterTester.cs" />
+    <Compile Include="TestExtensions.cs" />
+    <Compile Include="TestMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\FluentValidation\FluentValidation.csproj">
+      <Project>{7387D7D2-4E17-46C3-B023-80D04BC9E13E}</Project>
+      <Name>FluentValidation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestMessages.fr.resx" />
+    <EmbeddedResource Include="TestMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

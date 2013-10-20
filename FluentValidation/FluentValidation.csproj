@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7387D7D2-4E17-46C3-B023-80D04BC9E13E}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FluentValidation</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>FluentValidation</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MONOTOUCH</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;MONOTOUCH</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CollectionValidatorExtensions.cs">
+      <Link>CollectionValidatorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="Enums.cs">
+      <Link>Enums.cs</Link>
+    </Compile>
+    <Compile Include="DefaultValidatorOptions.cs">
+      <Link>DefaultValidatorOptions.cs</Link>
+    </Compile>
+    <Compile Include="Internal\CollectionPropertyRule.cs">
+      <Link>CollectionPropertyRule.cs</Link>
+    </Compile>
+    <Compile Include="Internal\Comparer.cs">
+      <Link>Comparer.cs</Link>
+    </Compile>
+    <Compile Include="Internal\IConfigurable.cs">
+      <Link>IConfigurable.cs</Link>
+    </Compile>
+    <Compile Include="Internal\InstanceCache.cs">
+      <Link>InstanceCache.cs</Link>
+    </Compile>
+    <Compile Include="Internal\MessageFormatter.cs">
+      <Link>MessageFormatter.cs</Link>
+    </Compile>
+    <Compile Include="Internal\RulesetValidatorSelector.cs">
+      <Link>RulesetValidatorSelector.cs</Link>
+    </Compile>
+    <Compile Include="MemberAccessor.cs">
+      <Link>MemberAccessor.cs</Link>
+    </Compile>
+    <Compile Include="PropertyRuleValidatorExtensions.cs">
+      <Link>PropertyRuleValidatorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="Resources\IResourceAccessorBuilder.cs">
+      <Link>IResourceAccessorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="Resources\IStringSource.cs">
+      <Link>IStringSource.cs</Link>
+    </Compile>
+    <Compile Include="Resources\LazyStringSource.cs">
+      <Link>LazyStringSource.cs</Link>
+    </Compile>
+    <Compile Include="Resources\LocalizedStringSource.cs">
+      <Link>LocalizedStringSource.cs</Link>
+    </Compile>
+    <Compile Include="Resources\StaticStringSource.cs">
+      <Link>StaticStringSource.cs</Link>
+    </Compile>
+    <Compile Include="TestHelper\ValidationTestException.cs">
+      <Link>ValidationTestException.cs</Link>
+    </Compile>
+    <Compile Include="TestHelper\ValidatorTester.cs">
+      <Link>ValidatorTester.cs</Link>
+    </Compile>
+    <Compile Include="TestHelper\ValidatorTestExtensions.cs">
+      <Link>ValidatorTestExtensions.cs</Link>
+    </Compile>
+    <Compile Include="ValidationContext.cs">
+      <Link>ValidationContext.cs</Link>
+    </Compile>
+    <Compile Include="ValidatorFactoryBase.cs">
+      <Link>ValidatorFactoryBase.cs</Link>
+    </Compile>
+    <Compile Include="ValidatorOptions.cs">
+      <Link>ValidatorOptions.cs</Link>
+    </Compile>
+    <Compile Include="CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AbstractValidator.cs">
+      <Link>AbstractValidator.cs</Link>
+    </Compile>
+    <Compile Include="Attributes\AttributedValidatorFactory.cs">
+      <Link>AttributedValidatorFactory.cs</Link>
+    </Compile>
+    <Compile Include="Attributes\ValidatorAttribute.cs">
+      <Link>ValidatorAttribute.cs</Link>
+    </Compile>
+    <Compile Include="DefaultValidatorExtensions.cs">
+      <Link>DefaultValidatorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="ValidationException.cs">
+      <Link>ValidationException.cs</Link>
+    </Compile>
+    <Compile Include="InlineValidator.cs">
+      <Link>InlineValidator.cs</Link>
+    </Compile>
+    <Compile Include="Internal\DefaultValidatorSelector.cs">
+      <Link>DefaultValidatorSelector.cs</Link>
+    </Compile>
+    <Compile Include="Internal\TrackingCollection.cs">
+      <Link>TrackingCollection.cs</Link>
+    </Compile>
+    <Compile Include="Internal\DelegateValidator.cs">
+      <Link>DelegateValidator.cs</Link>
+    </Compile>
+    <Compile Include="Internal\Extensions.cs">
+      <Link>Extensions.cs</Link>
+    </Compile>
+    <Compile Include="Internal\IFluentInterface.cs">
+      <Link>IFluentInterface.cs</Link>
+    </Compile>
+    <Compile Include="Internal\IValidatorSelector.cs">
+      <Link>IValidatorSelector.cs</Link>
+    </Compile>
+    <Compile Include="Internal\MemberNameValidatorSelector.cs">
+      <Link>MemberNameValidatorSelector.cs</Link>
+    </Compile>
+    <Compile Include="Internal\PropertyRule.cs">
+      <Link>PropertyRule.cs</Link>
+    </Compile>
+    <Compile Include="Internal\RuleBuilder.cs">
+      <Link>RuleBuilder.cs</Link>
+    </Compile>
+    <Compile Include="Internal\PropertyChain.cs">
+      <Link>PropertyChain.cs</Link>
+    </Compile>
+    <Compile Include="IValidationRule.cs">
+      <Link>IValidationRule.cs</Link>
+    </Compile>
+    <Compile Include="IValidator.cs">
+      <Link>IValidator.cs</Link>
+    </Compile>
+    <Compile Include="IValidatorDescriptor.cs">
+      <Link>IValidatorDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="IValidatorFactory.cs">
+      <Link>IValidatorFactory.cs</Link>
+    </Compile>
+    <Compile Include="Results\ValidationFailure.cs">
+      <Link>ValidationFailure.cs</Link>
+    </Compile>
+    <Compile Include="Results\ValidationResult.cs">
+      <Link>ValidationResult.cs</Link>
+    </Compile>
+    <Compile Include="Syntax.cs">
+      <Link>Syntax.cs</Link>
+    </Compile>
+    <Compile Include="ValidatorDescriptor.cs">
+      <Link>ValidatorDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="Validators\AbstractComparisonValidator.cs">
+      <Link>AbstractComparisonValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\ChildCollectionValidatorAdaptor.cs">
+      <Link>ChildCollectionValidatorAdaptor.cs</Link>
+    </Compile>
+    <Compile Include="Validators\ChildValidatorAdaptor.cs">
+      <Link>ChildValidatorAdaptor.cs</Link>
+    </Compile>
+    <Compile Include="Validators\CreditCardValidator.cs">
+      <Link>CreditCardValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\EmailValidator.cs">
+      <Link>EmailValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\EqualValidator.cs">
+      <Link>EqualValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\ExclusiveBetweenValidator.cs">
+      <Link>ExclusiveBetweenValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\InclusiveBetweenValidator.cs">
+      <Link>InclusiveBetweenValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\NoopPropertyValidator.cs">
+      <Link>NoopPropertyValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\PropertyValidator.cs">
+      <Link>PropertyValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\RegularExpressionValidator.cs">
+      <Link>RegularExpressionValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\DelegatingValidator.cs">
+      <Link>DelegatingValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\GreaterThanOrEqualValidator.cs">
+      <Link>GreaterThanOrEqualValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\GreaterThanValidator.cs">
+      <Link>GreaterThanValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\IPropertyValidator.cs">
+      <Link>IPropertyValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\LengthValidator.cs">
+      <Link>LengthValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\LessThanOrEqualValidator.cs">
+      <Link>LessThanOrEqualValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\LessThanValidator.cs">
+      <Link>LessThanValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\NotEmptyValidator.cs">
+      <Link>NotEmptyValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\NotEqualValidator.cs">
+      <Link>NotEqualValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\NotNullValidator.cs">
+      <Link>NotNullValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\PredicateValidator.cs">
+      <Link>PredicateValidator.cs</Link>
+    </Compile>
+    <Compile Include="Validators\PropertyValidatorContext.cs">
+      <Link>PropertyValidatorContext.cs</Link>
+    </Compile>
+    <Compile Include="Validators\ScalePrecisionValidator.cs">
+      <Link>ScalePrecisionValidator.cs</Link>
+    </Compile>
+    <Compile Include="Resources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Messages.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.nl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.pl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.pt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.sv.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.tr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="monotouch" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+</Project>
